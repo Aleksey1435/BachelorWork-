@@ -1,0 +1,73 @@
+﻿<Window x:Class="GraduationWork.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GraduationWork"
+        mc:Ignorable="d"
+        Title="LoginWindow" x:Name="loginWindow" MaxHeight="650" MinHeight="650" Height="650" Width="400" MaxWidth="400" MinWidth="400">
+    <Grid ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="loginPageColumn" Width="400" >
+            </ColumnDefinition>
+            <ColumnDefinition x:Name="registerPageColumn" >
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="loginPageGrid" Height="650">
+            <Grid.RowDefinitions>
+                <RowDefinition>
+                </RowDefinition>
+                <RowDefinition>
+                </RowDefinition>
+                <RowDefinition>
+                </RowDefinition>
+                <RowDefinition>
+                </RowDefinition>
+            </Grid.RowDefinitions>
+            <Label  Height="100" Content="Authorization" FontSize="25" VerticalContentAlignment="Center"  HorizontalContentAlignment="Center" Margin="0,52,0,10"></Label>
+            <Label Height="30" Width="50" Margin="61,26,289,107" Content="Login" Grid.Row="1"></Label>
+            <TextBox x:Name="insertLoginTextBox" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{DynamicResource AvgTextBox}" Grid.Row="1" Height="35" Margin="61,56,73,71"/>
+
+            <Label Grid.Row="1"  Height="30" Width="100" Content="Password" Margin="61,148,239,148" Grid.RowSpan="2"></Label>
+            <PasswordBox x:Name="insertPasswordTextBox" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{DynamicResource AvgPassTextBox}" Grid.Row="2" Height="35" Margin="61,15,73,112"/>
+
+            <Button x:Name="loginBtn" Grid.Row="2" Height="50" Width="150" Margin="0,100,200,0" Click="LoginBtn_Click" Style="{DynamicResource AverageBtn}">Login</Button>
+            <Button x:Name="registerBtn" Grid.Row="2"  Height="50" Width="150" Margin="200,100,0,0" Click="RegisterBtn_Click" Style="{DynamicResource AverageBtn}">Register</Button>
+        </Grid>
+        <Grid x:Name="registerPageGrid" Height="650" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition>
+                </RowDefinition>
+                <RowDefinition>
+                </RowDefinition>
+                <RowDefinition>
+                </RowDefinition>
+                <RowDefinition>
+                </RowDefinition>
+                <RowDefinition>
+                </RowDefinition>
+                <RowDefinition>
+                </RowDefinition>
+                <RowDefinition>
+                </RowDefinition>
+                <RowDefinition>
+                </RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Name" Height="15" Width="200" Margin="-100,-60,0,0" Grid.Row="1"></TextBlock>
+            <TextBox x:Name="getName" MaxLength="30" Style="{DynamicResource AvgTextBox}" Height="30" Margin="22,10,18,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Row="1"/>
+            <TextBlock Text="Surname" Height="15" Width="200" Margin="-100,-60,0,0" Grid.Row="2" ></TextBlock>
+            <TextBox x:Name="getSurname" MaxLength="30" Style="{DynamicResource AvgTextBox}" Height="30" Margin="20,10,20,0" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></TextBox>
+            <TextBlock Text="Login" Height="15" Width="200" Margin="-100,-60,0,0" Grid.Row="3"></TextBlock>
+            <TextBox x:Name="getLogin" MaxLength="30" Style="{DynamicResource AvgTextBox}" Height="30" Margin="20,10,20,0" Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></TextBox>
+            <TextBlock Text="Password" Height="15" Width="200" Margin="-100,-60,0,0" Grid.Row="4"></TextBlock>
+            <PasswordBox x:Name="getPassword" MaxLength="30"  Style="{DynamicResource AvgPassTextBox}" Height="30" Margin="20,10,20,0" Grid.Row="4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></PasswordBox>
+            <TextBlock Text="Phone number" Height="15" Width="200" Margin="-100,-60,0,0" Grid.Row="5"></TextBlock>
+            <TextBox x:Name="getPhoneNumber" PreviewTextInput="Numbers_PreviewTextInput"  MaxLength="10" Style="{DynamicResource AvgTextBox}" Height="30" Margin="20,10,20,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Row="5"></TextBox>
+            <TextBlock Text="Email address" Height="15" Width="200" Margin="-100,-80,0,0" Grid.Row="6"></TextBlock>
+            <TextBox x:Name="getEmail" MaxLength="40" Style="{DynamicResource AvgTextBox}" Height="30" Margin="20,-10,20,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Row="6"></TextBox>
+            <Button x:Name="CreateAccountBtn" Style="{DynamicResource AverageBtn}" Content="Create account" Grid.Row="6" Height="50" Width="120" Margin="230,64,50,48" Grid.RowSpan="2" Click="CreateAccountBtn_Click" ></Button>
+            <Button x:Name="RegBackBtn" Style="{DynamicResource AverageBtn}" Content="Back" Grid.Row="6" Height="50" Width="120" Margin="50,64,230,48" Grid.RowSpan="2" Click="RegBackBtn_Click"></Button>
+            <Label Content="Registration" HorizontalAlignment="Center" VerticalContentAlignment='Center' HorizontalContentAlignment="Center" FontSize="20" VerticalAlignment="Center" Width="226" Height="62"/>
+        </Grid>
+    </Grid>
+</Window>
